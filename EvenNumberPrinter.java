@@ -19,23 +19,15 @@ public class EvenNumberPrinter {
             return;
         }
 
-        int sum = 0;
-        boolean first = true;
+        int k = num / 2;          // how many even numbers
+        int sum = k * (k + 1);    // sum of first k even numbers
 
         for (int i = 2; i <= num; i += 2) {
-            if (!first) {
+            System.out.print(i);
+            if (i + 2 <= num) {
                 System.out.print(" + ");
             }
-            System.out.print(i);
-            sum += i;
-            first = false;
         }
-
-        if (first) {
-            // num is 1, so there are no even numbers
-            System.out.println("0");
-        } else {
-            System.out.println(" = " + sum);
-        }
+        System.out.println(k == 0 ? "0" : " = " + sum);
     }
 }

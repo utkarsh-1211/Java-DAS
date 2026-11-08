@@ -14,20 +14,22 @@ public class EvenNumberPrinter {
     }
 
     public void calculate(int num) {
-        if (num <= 0) {
+        if (num <= 1) {
             System.out.println("Invalid input");
             return;
         }
-
-        int k = num / 2;          // how many even numbers
-        int sum = k * (k + 1);    // sum of first k even numbers
-
-        for (int i = 2; i <= num; i += 2) {
-            System.out.print(i);
-            if (i + 2 <= num) {
-                System.out.print(" + ");
-            }
-        }
-        System.out.println(k == 0 ? "0" : " = " + sum);
+        int sum = 0;
+       for(int i = 2 ; i<=num ; i++) {
+    	   if(i%2==0) {
+    		   System.out.print(i);
+    		   sum+=i;
+    		   if(num%2==0 && i<num) System.out.print(" + ");
+        	   if(num%2!=0 && i<(num-2)) System.out.print(" + ");  	 	 	
+    	   }
+    	   
+    	   
+       }
+       
+       System.out.println(" = " + sum);
     }
 }

@@ -8,6 +8,7 @@ public static void main(String[] args) {
 	System.out.print("Enter num : ");
 	int n = sc.nextInt();
 	SquareSum sum = new SquareSum();
-	sum.calculate(n);
+	sum.calculateSquareSum(n);
+	sum.calculateCubSum(n);
 }
 }
